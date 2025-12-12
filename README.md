@@ -43,3 +43,32 @@ O modelo final (Random Forest) alcançou performance superior para o negócio, p
 ```bash
 git clone [https://github.com/SEU_USUARIO/fraud-detection-finance.git](https://github.com/SEU_USUARIO/fraud-detection-finance.git)
 cd fraud-detection-finance
+```
+
+### 2. Instale as dependências
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Pipeline de treinamento
+```bash
+#O script detecta automaticamente os caminhos
+python src/models/train_model.py
+```
+
+### 4. Rodando a API
+```bash
+python src/api.py
+```
+Acesse a documentação interativa em: http://localhost:8000/docs
+
+### Estrutura dos diretórios
+```bash
+├── data/              # Dados brutos e processados (ignorados no git)
+├── notebooks/         # Jupyter Notebooks para análise e prototipagem
+├── src/               # Código fonte de produção
+│   ├── models/        # Scripts de treinamento automatizado
+│   └── api.py         # API REST (FastAPI)
+├── models/            # Modelos serializados (.pkl)
+└── README.md          # Documentação
+```
